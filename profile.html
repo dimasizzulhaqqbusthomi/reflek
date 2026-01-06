@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Pembeli - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="bg-emerald-600 px-6 pt-16 pb-12 text-white rounded-b-[50px] relative">
+        <div class="flex flex-col items-center text-center">
+          <div class="relative mb-4">
+            <div class="w-24 h-24 rounded-[32px] bg-white p-1 shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80"
+                class="w-full h-full object-cover rounded-[28px]"
+              />
+            </div>
+            <div
+              class="absolute -bottom-2 -right-2 bg-emerald-400 border-4 border-emerald-600 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i class="fa-solid fa-medal text-sm text-emerald-900"></i>
+            </div>
+          </div>
+          <h2 class="text-lg font-bold italic tracking-tight">Adrian Ferdinand</h2>
+          <p class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-80 mt-1">Penjaga Hutan • Level 2</p>
+        </div>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar px-6 py-8 pb-32 -mt-6">
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <button
+            onclick="window.location.href='impact-wallet.html'"
+            class="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm flex items-center gap-3 active:scale-95 transition-all text-left"
+          >
+            <div class="w-10 h-10 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div>
+              <p class="text-[14px] font-bold text-gray-800">1,240</p>
+              <p class="text-[8px] font-bold text-gray-400 uppercase tracking-tighter">Impact Pts</p>
+            </div>
+          </button>
+          <div class="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm flex items-center gap-3 text-left">
+            <div class="w-10 h-10 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <p class="text-[14px] font-bold text-gray-800">12</p>
+              <p class="text-[8px] font-bold text-gray-400 uppercase tracking-tighter">Batch Order</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="mb-8">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest ml-1 mb-4 italic">Manajemen Toko</h3>
+          <button
+            onclick="window.location.href='regis.html'"
+            class="w-full flex items-center justify-between p-5 bg-emerald-600 text-white rounded-[24px] shadow-lg shadow-emerald-200 active:scale-95 transition-all"
+          >
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                <i class="fa-solid fa-store text-white"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-xs font-bold block italic">Masuk ke Toko Saya</span>
+                <span class="text-[8px] opacity-80 uppercase tracking-wider">Kelola Produk & Pesanan</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </section>
+
+        <section class="space-y-3">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest ml-1 mb-4 italic">Pengaturan Akun</h3>
+
+          <button
+            onclick="window.location.href='daftar-pesanan.html'"
+            class="w-full flex items-center justify-between p-4 bg-gray-50 rounded-2xl active:bg-gray-100 transition-all"
+          >
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-bag-shopping text-emerald-600"></i>
+              <span class="text-xs font-bold italic">Pesanan Saya</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-[10px] text-gray-300"></i>
+          </button>
+
+          <button
+            onclick="window.location.href='impact-wallet.html'"
+            class="w-full flex items-center justify-between p-4 bg-gray-50 rounded-2xl active:bg-gray-100 transition-all"
+          >
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-wallet text-emerald-600"></i>
+              <span class="text-xs font-bold italic">Impact Wallet & Voucher</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="bg-red-500 w-2 h-2 rounded-full animate-pulse"></span>
+              <i class="fa-solid fa-chevron-right text-[10px] text-gray-300"></i>
+            </div>
+          </button>
+
+          <button
+            onclick="window.location.href='alamat.html'"
+            class="w-full flex items-center justify-between p-4 bg-gray-50 rounded-2xl active:bg-gray-100 transition-all"
+          >
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-location-dot text-emerald-600"></i>
+              <span class="text-xs font-bold italic">Daftar Alamat</span>
+            </div>
+            <i class="fa-solid fa-chevron-right text-[10px] text-gray-300"></i>
+          </button>
+
+          <button class="w-full flex items-center justify-between p-4 bg-red-50 rounded-2xl active:bg-red-100 transition-all mt-6">
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-arrow-right-from-bracket text-red-500"></i>
+              <span class="text-xs font-bold italic text-red-500">Keluar Akun</span>
+            </div>
+          </button>
+        </section>
+      </main>
+
+      <nav
+        class="sticky bottom-0 z-30 bg-white/95 backdrop-blur-md border-t border-gray-100 px-8 py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.02)]"
+      >
+        <button onclick="window.location.href='halamanutama.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-house-chimney text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Beranda</span>
+        </button>
+        <button onclick="window.location.href='impact-wallet.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-wallet text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Wallet</span>
+        </button>
+        <button onclick="window.location.href='chatpembeli.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-comment-dots text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Pesan</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-emerald-600">
+          <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mb-0.5 border border-emerald-500">
+            <i class="fa-solid fa-user text-[10px] text-emerald-600"></i>
+          </div>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Profil</span>
+          <div class="w-1 h-1 bg-emerald-600 rounded-full"></div>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>

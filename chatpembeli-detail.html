@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat - Toko A (Eco-Craft Sby)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md px-6 pt-12 pb-4 border-b border-gray-50 flex items-center gap-4">
+        <button onclick="history.back()" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 text-gray-400">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <div class="flex items-center gap-3 flex-grow">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=150&q=80"
+              class="w-10 h-10 rounded-2xl object-cover shadow-sm"
+            />
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white"></span>
+          </div>
+          <div>
+            <h2 class="text-xs font-bold leading-none italic">Toko A (Eco-Craft Sby)</h2>
+            <p class="text-[9px] text-emerald-500 font-bold mt-1 uppercase tracking-tighter italic">Online</p>
+          </div>
+        </div>
+        <button class="text-gray-400 text-sm">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+      </header>
+
+      <div class="px-6 py-2 bg-emerald-50 border-b border-emerald-100 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-link text-emerald-600 text-[10px]"></i>
+          <p class="text-[9px] font-bold text-emerald-800 uppercase tracking-tighter">Status: Pesanan Telah Digabung (#ORD-99120)</p>
+        </div>
+        <button onclick="window.location.href='detail-pesanan.html'" class="text-[9px] font-bold text-emerald-600 underline">LIHAT</button>
+      </div>
+
+      <main class="flex-grow p-6 overflow-y-auto no-scrollbar space-y-6 bg-gray-50/30">
+        <p class="text-[9px] text-center text-gray-300 font-bold uppercase tracking-[0.2em]">Hari ini</p>
+
+        <div class="flex items-start justify-end gap-2 ml-auto max-w-[85%]">
+          <div class="bg-emerald-600 p-4 rounded-t-2xl rounded-bl-2xl rounded-br-sm shadow-lg shadow-emerald-100 text-white">
+            <p class="text-xs leading-relaxed italic">
+              Halo kak, saya baru checkout produk kedua (Wadah Bambu). Apakah benar otomatis digabung pengirimannya?
+            </p>
+            <div class="flex items-center justify-end gap-1 mt-2">
+              <span class="text-[8px] text-emerald-100">09:15</span>
+              <i class="fa-solid fa-check-double text-[8px] text-emerald-200"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-2 max-w-[85%]">
+          <div class="bg-white p-4 rounded-t-2xl rounded-br-2xl rounded-bl-sm shadow-sm border border-gray-100">
+            <p class="text-xs leading-relaxed">
+              Halo Kak! Betul sekali, sistem kami mendeteksi alamat yang sama. Pesanan wadah bambu dan kebaya kakak akan dikemas dalam satu paket pada
+              jam 16:00 nanti ya. Terima kasih sudah membantu mengurangi limbah kemasan! 😊
+            </p>
+            <span class="block text-[8px] text-gray-400 mt-2 text-right">09:20</span>
+          </div>
+        </div>
+
+        <div class="flex items-start justify-end gap-2 ml-auto max-w-[85%]">
+          <div class="bg-emerald-600 p-4 rounded-t-2xl rounded-bl-2xl rounded-br-sm shadow-lg shadow-emerald-100 text-white">
+            <p class="text-xs leading-relaxed italic">Siap kak, terima kasih informasinya!</p>
+            <div class="flex items-center justify-end gap-1 mt-2">
+              <span class="text-[8px] text-emerald-100">09:22</span>
+              <i class="fa-solid fa-check-double text-[8px] text-emerald-200"></i>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="p-4 bg-white border-t border-gray-50 flex items-center gap-3 pb-8">
+        <button class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-50 text-gray-400">
+          <i class="fa-solid fa-paperclip text-sm"></i>
+        </button>
+        <div class="flex-grow relative">
+          <input
+            type="text"
+            placeholder="Tulis pesan..."
+            class="w-full bg-gray-50 border border-transparent focus:bg-white focus:border-emerald-500 rounded-2xl py-3 px-4 text-xs outline-none transition-all"
+          />
+        </div>
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded-xl bg-emerald-600 text-white shadow-lg shadow-emerald-100 active:scale-95 transition-all"
+        >
+          <i class="fa-solid fa-paper-plane text-sm"></i>
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lacak Pesanan - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .stepper-line {
+        width: 2px;
+        height: 100%;
+        background: #e5e7eb;
+        position: absolute;
+        left: 15px;
+        top: 0;
+      }
+      .active-step {
+        background: #10b981;
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-4 border-b border-gray-50 flex items-center gap-4">
+        <button onclick="history.back()" class="text-gray-800">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-sm font-bold tracking-tight uppercase italic text-emerald-600">Lacak Pengiriman</h1>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar">
+        <div class="w-full h-48 bg-emerald-50 relative overflow-hidden">
+          <div
+            class="absolute inset-0 opacity-20"
+            style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px"
+          ></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+            <i class="fa-solid fa-bicycle text-3xl text-emerald-600 animate-bounce"></i>
+            <div class="bg-white px-3 py-1 rounded-full shadow-md mt-2 border border-emerald-100">
+              <p class="text-[8px] font-bold uppercase tracking-tighter">Kurir Eco-Bike</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-6 py-6 bg-white -mt-6 rounded-t-[40px] relative z-10 border-b border-gray-50">
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <p class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">No. Resi Gabungan</p>
+              <h2 class="text-xs font-bold font-mono">BATCH-99120-SBY</h2>
+            </div>
+            <div class="text-right">
+              <p class="text-[9px] font-bold text-emerald-500 uppercase italic">Estimasi Tiba</p>
+              <p class="text-xs font-bold italic">Hari Ini, 19:00</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="px-8 py-8">
+          <div class="relative space-y-10">
+            <div class="relative flex gap-6">
+              <div class="stepper-line"></div>
+              <div class="w-8 h-8 rounded-full active-step flex items-center justify-center text-white z-10 relative">
+                <i class="fa-solid fa-truck-fast text-[10px]"></i>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-[11px] font-bold text-emerald-600 uppercase italic">Sedang Dikirim</h4>
+                <p class="text-[10px] text-gray-500 mt-1 leading-relaxed italic">
+                  Kurir dalam perjalanan menuju lokasi Anda menggunakan sepeda listrik.
+                </p>
+                <span class="text-[8px] text-gray-400 font-bold uppercase block mt-2">16:45 WIB</span>
+              </div>
+            </div>
+
+            <div class="relative flex gap-6">
+              <div class="stepper-line"></div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 z-10 relative">
+                <i class="fa-solid fa-box text-[10px]"></i>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-[11px] font-bold text-gray-800 uppercase italic opacity-70">Batch Selesai Dikemas</h4>
+                <p class="text-[10px] text-gray-400 mt-1 leading-relaxed italic">
+                  Pesanan Anda telah digabung dengan pesanan area Wonokromo lainnya.
+                </p>
+                <span class="text-[8px] text-gray-300 font-bold uppercase block mt-2">16:10 WIB</span>
+              </div>
+            </div>
+
+            <div class="relative flex gap-6">
+              <div class="stepper-line"></div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 z-10 relative">
+                <i class="fa-solid fa-clock text-[10px]"></i>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-[11px] font-bold text-gray-800 uppercase italic opacity-70">Menunggu Batch 16:00</h4>
+                <p class="text-[10px] text-gray-400 mt-1 leading-relaxed italic">Pesanan dikonfirmasi dan mengantri jadwal pengiriman kolektif.</p>
+                <span class="text-[8px] text-gray-300 font-bold uppercase block mt-2">09:30 WIB</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="p-6 bg-emerald-50 border-t border-emerald-100">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm">
+            <i class="fa-solid fa-leaf text-lg"></i>
+          </div>
+          <div>
+            <p class="text-[9px] font-bold text-emerald-800 uppercase tracking-tighter italic">Dampak Pengiriman Ini</p>
+            <p class="text-[10px] text-emerald-600 font-medium italic">Anda menghemat 0.2kg emisi karbon melalui pengiriman batch hari ini.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

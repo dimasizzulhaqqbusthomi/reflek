@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Eco-Dynamic - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Animasi transisi untuk pesan dinamis */
+      #eco-message {
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-4 border-b border-gray-50 flex items-center gap-4">
+        <button onclick="history.back()" class="text-gray-800"><i class="fa-solid fa-chevron-left text-lg"></i></button>
+        <h1 class="text-lg font-bold tracking-tight uppercase italic text-emerald-600">Checkout</h1>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar px-6 py-6 pb-48">
+        <section class="mb-6 p-4 bg-gray-50 rounded-[32px] border border-gray-100 shadow-sm">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Penerima</h3>
+            <button class="text-[10px] font-bold text-emerald-600">UBAH</button>
+          </div>
+          <p class="text-xs font-bold">Adrian Ferdinand <span class="text-gray-400 font-normal">| 0812-3456-7890</span></p>
+          <p class="text-[10px] text-gray-500 mt-1 leading-relaxed">Jl. Ahmad Yani No. 2-4, Surabaya, Jawa Timur</p>
+        </section>
+
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-blue-500 text-white text-[7px] font-bold px-1.5 py-0.5 rounded uppercase italic">LOCAL</span>
+            <h3 class="text-xs font-bold text-gray-800 italic">Toko A (Eco-Craft Sby)</h3>
+          </div>
+          <div class="bg-gray-200 rounded-[32px] p-4 flex gap-4">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden shrink-0 border-2 border-white shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=150&q=80"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex-grow">
+              <span class="bg-emerald-500 text-white text-[7px] font-bold px-2 py-0.5 rounded uppercase">Ramah Lingkungan</span>
+              <h4 class="text-[10px] font-bold text-gray-800 mt-1 uppercase italic leading-tight">Kebaya Hutan Raya bogor uchiha edisi sawit</h4>
+              <p class="text-xs font-bold text-emerald-600 mt-1 font-mono">Rp 450.000</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 ml-1 italic">Pilihan Pengiriman</h3>
+          <div class="space-y-3">
+            <label
+              onclick="updateSelection(20000, true)"
+              class="flex items-center justify-between p-4 bg-emerald-500 rounded-2xl border-2 border-emerald-400 cursor-pointer text-white shadow-lg shadow-emerald-100"
+            >
+              <div class="flex items-center gap-3">
+                <input type="radio" name="delivery" checked class="accent-white" />
+                <div>
+                  <p class="text-xs font-bold uppercase">Green Delivery</p>
+                  <p class="text-[9px] opacity-80 italic">2-3 Hari | Rendah Emisi</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold font-mono">Rp 20.000</span>
+            </label>
+
+            <label
+              onclick="updateSelection(45000, false)"
+              class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-200 cursor-pointer"
+            >
+              <div class="flex items-center gap-3">
+                <input type="radio" name="delivery" class="accent-emerald-500" />
+                <div>
+                  <p class="text-xs font-bold text-gray-800 uppercase">Express Delivery</p>
+                  <p class="text-[9px] text-gray-400 italic">1 Hari | Emisi Tinggi</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-gray-800 font-mono">Rp 45.000</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="mb-6">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 ml-1">Metode Pembayaran</h3>
+          <select class="w-full p-4 bg-gray-50 border border-gray-200 rounded-2xl text-[10px] font-bold outline-none uppercase tracking-widest">
+            <option>QRIS (Gopay/OVO/Dana)</option>
+            <option>Transfer Bank BCA</option>
+            <option>Mandiri Virtual Account</option>
+            <option>Impact Wallet Poin</option>
+            <option>COD (Bayar di Tempat)</option>
+          </select>
+        </section>
+      </main>
+
+      <footer
+        class="bottom-0 left-0 right-0 z-40 bg-emerald-600 px-6 py-6 border-t border-emerald-500 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] rounded-t-[40px]"
+      >
+        <div class="space-y-1 mb-6 text-white">
+          <div class="flex justify-between text-[10px] font-bold uppercase tracking-tighter italic">
+            <span>Subtotal Produk:</span>
+            <span>Rp 450.000</span>
+          </div>
+          <div class="flex justify-between text-[10px] font-bold uppercase tracking-tighter italic">
+            <span>Ongkos Kirim:</span>
+            <span id="shipping-cost">Rp 20.000</span>
+          </div>
+
+          <div id="eco-message" class="h-4 opacity-100">
+            <p class="text-[9px] font-bold text-emerald-200 italic mt-1 uppercase tracking-tighter">
+              <i class="fa-solid fa-leaf mr-1"></i> Pengiriman Lebih Sedikit mengurangi emisi
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mb-6 pt-4 border-t border-white/20 text-white">
+          <p class="text-xs font-bold uppercase tracking-widest">Total Bayar:</p>
+          <p id="total-cost" class="text-xl font-bold font-mono tracking-tighter">Rp 470.000</p>
+        </div>
+
+        <button
+          onclick="window.location.href='pembayaran.html'"
+          class="w-full py-4 bg-emerald-300 text-emerald-900 font-bold rounded-2xl shadow-xl shadow-emerald-700/20 active:scale-95 transition-all text-[10px] uppercase tracking-[0.2em]"
+        >
+          Konfirmasi Pembayaran
+        </button>
+      </footer>
+    </div>
+
+    <script>
+      function updateSelection(cost, isGreen) {
+        const productPrice = 450000;
+        const shippingElem = document.getElementById("shipping-cost");
+        const totalElem = document.getElementById("total-cost");
+        const messageElem = document.getElementById("eco-message");
+
+        // Update Harga
+        shippingElem.innerText = "Rp " + cost.toLocaleString("id-ID");
+        totalElem.innerText = "Rp " + (productPrice + cost).toLocaleString("id-ID");
+
+        // Update Pesan Dinamis
+        if (isGreen) {
+          messageElem.style.height = "1rem"; // Show
+          messageElem.style.opacity = "1";
+        } else {
+          messageElem.style.height = "0"; // Hide
+          messageElem.style.opacity = "0";
+        }
+      }
+    </script>
+  </body>
+</html>

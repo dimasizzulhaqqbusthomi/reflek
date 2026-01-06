@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impact Wallet - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-emerald-600 px-6 pt-12 pb-6 text-white rounded-b-[40px] shadow-lg">
+        <div class="flex items-center gap-4 mb-6">
+          <button onclick="history.back()" class="text-white">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+          </button>
+          <h1 class="text-sm font-bold tracking-widest uppercase italic">Impact Wallet</h1>
+        </div>
+
+        <div class="flex justify-between items-end">
+          <div>
+            <p class="text-[10px] font-bold uppercase opacity-80 mb-1">Total Impact Points</p>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-bold italic tracking-tighter">1,240</span>
+              <span class="text-xs font-bold uppercase opacity-80">Pts</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <div class="bg-emerald-400/30 px-3 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">
+              <p class="text-[9px] font-bold uppercase italic"><i class="fa-solid fa-medal mr-1"></i> Level 2: Penjaga Hutan</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar px-6 py-8 pb-32">
+        <section class="mb-10">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 ml-1 italic">Statistik Keberlanjutan</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-5 rounded-[32px] border border-gray-100">
+              <i class="fa-solid fa-cloud-arrow-down text-emerald-600 text-xl mb-3"></i>
+              <p class="text-[9px] font-bold text-gray-400 uppercase leading-none mb-1">Total CO2 Saved</p>
+              <p class="text-lg font-bold text-gray-800 italic">4.2 <span class="text-[10px] font-normal italic uppercase">kg</span></p>
+            </div>
+            <div class="bg-gray-50 p-5 rounded-[32px] border border-gray-100">
+              <i class="fa-solid fa-box-open text-emerald-600 text-xl mb-3"></i>
+              <p class="text-[9px] font-bold text-gray-400 uppercase leading-none mb-1">Batch Shipping</p>
+              <p class="text-lg font-bold text-gray-800 italic">12 <span class="text-[10px] font-normal italic uppercase">X</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-10">
+          <div class="flex justify-between items-center mb-4 px-1">
+            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest italic">Voucher Produk Lokal</h3>
+            <span class="text-[10px] font-bold text-emerald-600 uppercase italic">Lihat Semua</span>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-4 bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
+              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-500 shadow-sm">
+                <i class="fa-solid fa-ticket text-xl"></i>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-[10px] font-bold text-emerald-900 uppercase italic leading-none mb-1">Diskon 15% Eco-Craft</h4>
+                <p class="text-[9px] text-emerald-600 font-medium italic">Hasil pembelian Kebaya Hutan Raya</p>
+              </div>
+              <button class="bg-emerald-600 text-white text-[8px] font-bold px-3 py-2 rounded-lg uppercase tracking-tighter">Gunakan</button>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex justify-between items-center mb-4 px-1">
+            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest italic">Riwayat Aktivitas</h3>
+          </div>
+
+          <div class="space-y-4">
+            <div class="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <p class="text-[11px] font-bold text-gray-800 italic leading-none">Checkout Batch 16:00</p>
+                  <p class="text-[8px] text-gray-400 mt-1 uppercase tracking-tighter">09 Jan 2026 • #ORD-99120</p>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-600 italic">+20 Pts</span>
+              </div>
+              <div class="flex items-center gap-2 mt-3 pt-3 border-t border-dashed border-gray-100">
+                <i class="fa-solid fa-ticket text-[10px] text-emerald-500"></i>
+                <p class="text-[9px] font-bold text-emerald-700 uppercase italic">Mendapatkan 2 Kupon Diskon Produk Lokal</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm opacity-70">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <p class="text-[11px] font-bold text-gray-800 italic leading-none">Beli Produk Lokal</p>
+                  <p class="text-[8px] text-gray-400 mt-1 uppercase tracking-tighter">08 Jan 2026 • #ORD-98211</p>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-600 italic">+10 Pts</span>
+              </div>
+              <div class="flex items-center gap-2 mt-3 pt-3 border-t border-dashed border-gray-100">
+                <i class="fa-solid fa-ticket text-[10px] text-emerald-500"></i>
+                <p class="text-[9px] font-bold text-emerald-700 uppercase italic">Mendapatkan 1 Kupon Diskon Produk Lokal</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <nav
+        class="sticky bottom-0 z-30 bg-white/95 backdrop-blur-md border-t border-gray-100 px-8 py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.02)]"
+      >
+        <button onclick="window.location.href='halamanutama.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-house-chimney text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Beranda</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-emerald-600">
+          <i class="fa-solid fa-wallet text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Wallet</span>
+          <div class="w-1 h-1 bg-emerald-600 rounded-full"></div>
+        </button>
+        <button onclick="window.location.href='chatpembeli.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-comment-dots text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Pesan</span>
+        </button>
+        <button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center mb-0.5 border border-gray-100">
+            <i class="fa-solid fa-user text-[10px]"></i>
+          </div>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Profil</span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>

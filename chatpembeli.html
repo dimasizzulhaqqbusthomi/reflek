@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md px-6 pt-12 pb-4 border-b border-gray-50 flex items-center justify-between">
+        <h1 class="text-lg font-bold tracking-tight italic text-emerald-600">Pesan</h1>
+        <div class="flex gap-4">
+          <button class="text-gray-400"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button class="text-gray-400"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar">
+        <div class="px-6 py-4 bg-emerald-50 border-b border-emerald-100 flex items-center gap-4">
+          <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white shrink-0">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="flex-grow">
+            <h4 class="text-[10px] font-bold text-emerald-800 uppercase tracking-widest leading-none">Reflek Bot</h4>
+            <p class="text-[10px] text-emerald-600 mt-1 italic font-medium">2 Pesanan Anda dari Toko A telah digabung otomatis!</p>
+          </div>
+          <span class="text-[8px] font-bold text-emerald-400 uppercase">Baru</span>
+        </div>
+
+        <div class="divide-y divide-gray-50">
+          <div
+            onclick="window.location.href='chatpembeli-detail.html'"
+            class="flex items-center gap-4 p-6 hover:bg-gray-50 transition-all cursor-pointer bg-white relative"
+          >
+            <div class="relative">
+              <div class="w-14 h-14 rounded-[20px] bg-emerald-100 flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=150&q=80"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white"></span>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xs font-bold text-gray-800 italic">Toko A (Eco-Craft Sby)</h3>
+                <span class="text-[9px] text-gray-400 font-bold">14:20</span>
+              </div>
+              <p class="text-[10px] text-emerald-600 font-bold line-clamp-1 italic">
+                <i class="fa-solid fa-check-double mr-1 text-[8px]"></i> Pesanan #ORD-99120 sedang kami kemas kak...
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-6 hover:bg-gray-50 transition-all cursor-pointer bg-white">
+            <div
+              class="w-14 h-14 rounded-[20px] bg-gray-100 flex items-center justify-center overflow-hidden border-2 border-white shadow-sm grayscale opacity-70"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1602143302326-1934c13f4777?auto=format&fit=crop&w=150&q=80"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex-grow text-gray-400">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xs font-bold italic">Toko B (Global Green)</h3>
+                <span class="text-[9px] font-medium">Kemarin</span>
+              </div>
+              <p class="text-[10px] line-clamp-1 italic">Terima kasih telah berkontribusi bagi lingkungan!</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <nav
+        class="sticky bottom-0 z-30 bg-white/95 backdrop-blur-md border-t border-gray-100 px-8 py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.02)]"
+      >
+        <button onclick="window.location.href='halamanutama.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-house-chimney text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Beranda</span>
+        </button>
+        <button onclick="window.location.href='impact-wallet.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-wallet text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Wallet</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-emerald-600">
+          <i class="fa-solid fa-comment-dots text-lg text-emerald-600"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Pesan</span>
+          <div class="w-1 h-1 bg-emerald-600 rounded-full"></div>
+        </button>
+        <button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center mb-0.5 border border-gray-100">
+            <i class="fa-solid fa-user text-[10px]"></i>
+          </div>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Profil</span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>

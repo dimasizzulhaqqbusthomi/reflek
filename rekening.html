@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finansial Toko - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden text-gray-800">
+      <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md px-6 pt-10 pb-4 border-b border-gray-50">
+        <div class="flex items-center justify-between">
+          <button onclick="history.back()" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 text-gray-400">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <h1 class="text-sm font-bold tracking-tight uppercase">Keuangan Toko</h1>
+          <div class="w-10"></div>
+        </div>
+      </header>
+
+      <main class="flex-grow px-6 py-6 overflow-y-auto no-scrollbar">
+        <div class="bg-gray-900 rounded-[32px] p-6 text-white mb-6 shadow-xl relative overflow-hidden">
+          <div class="absolute right-0 top-0 opacity-10">
+            <i class="fa-solid fa-wallet text-9xl"></i>
+          </div>
+
+          <div class="relative z-10">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Saldo Aktif</p>
+            <h2 class="text-3xl font-bold tracking-tighter mb-6">Rp 2.450.000</h2>
+
+            <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+              <div>
+                <p class="text-[9px] text-emerald-400 font-bold uppercase tracking-tighter">Total Pendapatan</p>
+                <p class="text-sm font-bold">+ Rp 3.120.000</p>
+              </div>
+              <div class="border-l border-white/10 pl-4">
+                <p class="text-[9px] text-red-400 font-bold uppercase tracking-tighter">Total Pengeluaran</p>
+                <p class="text-sm font-bold">- Rp 670.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-100 transition-all active:scale-95 flex items-center justify-center gap-3 mb-8"
+        >
+          <i class="fa-solid fa-building-columns"></i>
+          <span class="tracking-wide">TARIK SALDO KE REKENING</span>
+        </button>
+
+        <div class="mb-8">
+          <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Rekening Tujuan</label>
+          <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                <i class="fa-solid fa-university text-gray-400 text-xs"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-gray-800 tracking-tight italic">BCA • Alya Prameswari</p>
+                <p class="text-[10px] text-gray-400 font-mono tracking-widest">**** **** 8829</p>
+              </div>
+            </div>
+            <button class="text-[10px] font-bold text-emerald-600">UBAH</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-end mb-4">
+            <label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Riwayat Transaksi</label>
+            <span class="text-[10px] text-emerald-600 font-bold">LIHAT SEMUA</span>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-4 bg-white border border-gray-50 rounded-2xl shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center">
+                  <i class="fa-solid fa-arrow-down-long text-xs"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-gray-800">Penjualan #ORD-99120</p>
+                  <p class="text-[9px] text-gray-400">12 Des 2025 • 16:45</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-emerald-600">+ Rp 127.000</span>
+            </div>
+
+            <div class="flex items-center justify-between p-4 bg-white border border-gray-50 rounded-2xl shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center">
+                  <i class="fa-solid fa-arrow-up-long text-xs"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-gray-800">Penarikan Saldo</p>
+                  <p class="text-[9px] text-gray-400">10 Des 2025 • 09:00</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-red-500">- Rp 500.000</span>
+            </div>
+
+            <div class="flex items-center justify-between p-4 bg-white border border-gray-50 rounded-2xl shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-gray-50 text-gray-400 rounded-lg flex items-center justify-center">
+                  <i class="fa-solid fa-leaf text-xs"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-gray-800">Eco-Fee Platform</p>
+                  <p class="text-[9px] text-gray-400">12 Des 2025 • 16:45</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-gray-600">- Rp 2.500</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="p-6 bg-white border-t border-gray-50">
+        <p class="text-[9px] text-center text-gray-400 leading-tight">
+          Penarikan diproses dalam <span class="font-bold">1x24 jam</span> kerja.<br />
+          Biaya admin penarikan <span class="text-emerald-500 font-bold">Rp 0</span> untuk sesama bank.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

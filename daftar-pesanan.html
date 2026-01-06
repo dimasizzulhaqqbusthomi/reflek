@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Pesanan - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-active {
+        background-color: #059669 !important;
+        color: white !important;
+        shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-4 border-b border-gray-50 flex items-center gap-4">
+        <button onclick="history.back()" class="text-gray-800">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-sm font-bold tracking-tight uppercase italic text-emerald-600">Pesanan Saya</h1>
+      </header>
+
+      <div class="flex gap-3 px-6 py-4 overflow-x-auto no-scrollbar bg-white border-b border-gray-50">
+        <button
+          onclick="filterStatus('all', this)"
+          class="filter-btn filter-active px-5 py-2 bg-gray-50 text-gray-400 text-[10px] font-bold rounded-full uppercase italic shrink-0 transition-all"
+        >
+          Semua
+        </button>
+        <button
+          onclick="filterStatus('diproses', this)"
+          class="filter-btn px-5 py-2 bg-gray-50 text-gray-400 text-[10px] font-bold rounded-full uppercase italic shrink-0 transition-all"
+        >
+          Diproses
+        </button>
+        <button
+          onclick="filterStatus('dikirim', this)"
+          class="filter-btn px-5 py-2 bg-gray-50 text-gray-400 text-[10px] font-bold rounded-full uppercase italic shrink-0 transition-all"
+        >
+          Dikirim
+        </button>
+        <button
+          onclick="filterStatus('selesai', this)"
+          class="filter-btn px-5 py-2 bg-gray-50 text-gray-400 text-[10px] font-bold rounded-full uppercase italic shrink-0 transition-all"
+        >
+          Selesai
+        </button>
+        <button
+          onclick="filterStatus('ulasan', this)"
+          class="filter-btn px-5 py-2 bg-gray-50 text-emerald-600 text-[10px] font-bold rounded-full uppercase italic shrink-0 border border-emerald-100 transition-all"
+        >
+          Ulasan
+        </button>
+      </div>
+
+      <main id="order-list" class="flex-grow overflow-y-auto no-scrollbar px-6 py-4 pb-32 space-y-6">
+        <div class="order-card bg-white rounded-[32px] border border-gray-100 shadow-sm p-5" data-category="diproses">
+          <div class="flex justify-between items-center mb-4">
+            <span class="bg-blue-500 text-white text-[7px] font-bold px-1.5 py-0.5 rounded uppercase italic">LOCAL</span>
+            <span class="text-[9px] font-bold text-orange-500 uppercase italic">Menunggu Batch</span>
+          </div>
+          <div class="flex gap-4 mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=150&q=80"
+              class="w-16 h-16 rounded-2xl object-cover"
+            />
+            <div class="flex-grow">
+              <h4 class="text-[10px] font-bold text-gray-700 leading-tight italic">Kebaya Hutan Raya Bogor</h4>
+              <p class="text-[10px] font-bold text-emerald-600 mt-1 font-mono">Rp 450.000</p>
+            </div>
+          </div>
+          <button
+            onclick="window.location.href='lacak.html'"
+            class="w-full py-3 bg-emerald-500 text-white font-bold rounded-xl text-[9px] uppercase italic"
+          >
+            Lacak Pesanan
+          </button>
+        </div>
+
+        <div class="order-card bg-white rounded-[32px] border border-gray-100 shadow-sm p-5" data-category="selesai ulasan">
+          <div class="flex justify-between items-center mb-4">
+            <span class="bg-red-500 text-white text-[7px] font-bold px-1.5 py-0.5 rounded uppercase italic">BRAND</span>
+            <span class="text-[9px] font-bold text-gray-400 uppercase italic">Tiba di Tujuan</span>
+          </div>
+          <div class="flex gap-4 mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=150&q=80"
+              class="w-16 h-16 rounded-2xl object-cover"
+            />
+            <div class="flex-grow">
+              <h4 class="text-[10px] font-bold text-gray-700 leading-tight italic">Sepatu Sport Eco-Step</h4>
+              <p class="text-[8px] text-orange-500 font-bold mt-1 italic"><i class="fa-solid fa-circle-exclamation mr-1"></i> Belum Diulas</p>
+            </div>
+          </div>
+          <button
+            onclick="window.location.href='tulis-ulasan.html'"
+            class="w-full py-3 bg-emerald-600 text-white font-bold rounded-xl text-[9px] uppercase italic"
+          >
+            Beri Ulasan (+10 Pts)
+          </button>
+        </div>
+
+        <div class="order-card bg-gray-50 rounded-[32px] border border-gray-100 p-5 opacity-80" data-category="selesai">
+          <div class="flex justify-between items-center mb-4">
+            <span class="bg-blue-500 text-white text-[7px] font-bold px-1.5 py-0.5 rounded uppercase italic">LOCAL</span>
+            <span class="text-[9px] font-bold text-emerald-600 uppercase italic">Selesai</span>
+          </div>
+          <div class="flex gap-4 mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1511164657592-59a45be6d533?auto=format&fit=crop&w=150&q=80"
+              class="w-16 h-16 rounded-2xl object-cover grayscale"
+            />
+            <div class="flex-grow">
+              <h4 class="text-[10px] font-bold text-gray-400 leading-tight italic">Wadah Bambu Set</h4>
+              <div class="flex gap-1 mt-1">
+                <i class="fa-solid fa-star text-amber-400 text-[8px]"></i>
+                <i class="fa-solid fa-star text-amber-400 text-[8px]"></i>
+                <i class="fa-solid fa-star text-amber-400 text-[8px]"></i>
+                <i class="fa-solid fa-star text-amber-400 text-[8px]"></i>
+                <i class="fa-solid fa-star text-amber-400 text-[8px]"></i>
+              </div>
+              <p class="text-[8px] text-emerald-600 font-bold mt-1 italic">Sudah Diulas (+10 Pts Terklaim)</p>
+            </div>
+          </div>
+          <button class="w-full py-3 bg-gray-200 text-gray-500 font-bold rounded-xl text-[9px] uppercase italic cursor-default">Lihat Ulasan</button>
+        </div>
+      </main>
+
+      <nav
+        class="sticky bottom-0 z-30 bg-white border-t border-gray-100 px-8 py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.02)]"
+      >
+        <button onclick="window.location.href='beranda.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-house-chimney text-lg"></i><span class="text-[9px] font-bold uppercase">Beranda</span>
+        </button>
+        <button onclick="window.location.href='impact-wallet.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-wallet text-lg"></i><span class="text-[9px] font-bold uppercase">Wallet</span>
+        </button>
+        <button onclick="window.location.href='chatpembeli.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-comment-dots text-lg"></i><span class="text-[9px] font-bold uppercase">Pesan</span>
+        </button>
+        <button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-emerald-600">
+          <i class="fa-solid fa-user text-lg"></i><span class="text-[9px] font-bold uppercase">Profil</span>
+        </button>
+      </nav>
+    </div>
+
+    <script>
+      function filterStatus(category, btn) {
+        // Update UI Button
+        document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("filter-active"));
+        btn.classList.add("filter-active");
+
+        // Update Card List
+        const cards = document.querySelectorAll(".order-card");
+        cards.forEach((card) => {
+          const categories = card.getAttribute("data-category").split(" ");
+          if (category === "all" || categories.includes(category)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
