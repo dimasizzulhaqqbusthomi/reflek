@@ -16,126 +16,125 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+  <body class="bg-gray-50 flex justify-center min-h-screen text-gray-800">
     <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
-      <header class="sticky top-0 z-30 bg-emerald-600 px-6 pt-12 pb-6 text-white rounded-b-[40px] shadow-lg">
-        <div class="flex items-center gap-4 mb-6">
-          <button onclick="history.back()" class="text-white">
-            <i class="fa-solid fa-chevron-left text-lg"></i>
-          </button>
-          <h1 class="text-sm font-bold tracking-widest uppercase italic">Impact Wallet</h1>
-        </div>
-
-        <div class="flex justify-between items-end">
-          <div>
-            <p class="text-[10px] font-bold uppercase opacity-80 mb-1">Total Impact Points</p>
-            <div class="flex items-baseline gap-2">
-              <span class="text-4xl font-bold italic tracking-tighter">1,240</span>
-              <span class="text-xs font-bold uppercase opacity-80">Pts</span>
-            </div>
-          </div>
-          <div class="text-right">
-            <div class="bg-emerald-400/30 px-3 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">
-              <p class="text-[9px] font-bold uppercase italic"><i class="fa-solid fa-medal mr-1"></i> Level 2: Penjaga Hutan</p>
-            </div>
-          </div>
-        </div>
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-4 flex items-center gap-4 border-b border-gray-50">
+        <button onclick="history.back()" class="text-gray-800"><i class="fa-solid fa-chevron-left text-lg"></i></button>
+        <h1 class="text-sm font-bold tracking-tight uppercase italic text-emerald-600">Jejak Kebaikanmu</h1>
       </header>
 
-      <main class="flex-grow overflow-y-auto no-scrollbar px-6 py-8 pb-32">
+      <main class="flex-grow overflow-y-auto no-scrollbar px-6 py-6 pb-32">
+        <section class="bg-emerald-600 rounded-[40px] p-8 text-white shadow-xl mb-8 relative overflow-hidden text-center">
+          <p class="text-[9px] font-bold uppercase tracking-[0.2em] opacity-80 mb-2">Total Impact Points</p>
+          <h2 class="text-5xl font-bold italic mb-2">128</h2>
+          <div class="inline-block px-4 py-1 bg-white/20 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">Green Shopper</div>
+
+          <div class="border-t border-white/10 pt-4 mt-2">
+            <p class="text-[10px] italic opacity-90">
+              <i class="fa-solid fa-truck-ramp-box mr-2"></i> Kamu telah menghemat <span class="font-bold">5 perjalanan</span> kurir melalui
+              penggabungan pesanan.
+            </p>
+          </div>
+        </section>
+
         <section class="mb-10">
-          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 ml-1 italic">Statistik Keberlanjutan</h3>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gray-50 p-5 rounded-[32px] border border-gray-100">
-              <i class="fa-solid fa-cloud-arrow-down text-emerald-600 text-xl mb-3"></i>
-              <p class="text-[9px] font-bold text-gray-400 uppercase leading-none mb-1">Total CO2 Saved</p>
-              <p class="text-lg font-bold text-gray-800 italic">4.2 <span class="text-[10px] font-normal italic uppercase">kg</span></p>
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 ml-1 italic">Pola Kebiasaanmu</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-gray-50 p-4 rounded-3xl border border-gray-100">
+              <p class="text-xl font-bold text-emerald-600">6x</p>
+              <p class="text-[9px] font-bold text-gray-500 uppercase leading-tight mt-1">Green Delivery</p>
             </div>
-            <div class="bg-gray-50 p-5 rounded-[32px] border border-gray-100">
-              <i class="fa-solid fa-box-open text-emerald-600 text-xl mb-3"></i>
-              <p class="text-[9px] font-bold text-gray-400 uppercase leading-none mb-1">Batch Shipping</p>
-              <p class="text-lg font-bold text-gray-800 italic">12 <span class="text-[10px] font-normal italic uppercase">X</span></p>
+            <div class="bg-gray-50 p-4 rounded-3xl border border-gray-100">
+              <p class="text-xl font-bold text-blue-600">4x</p>
+              <p class="text-[9px] font-bold text-gray-500 uppercase leading-tight mt-1">Pesanan Digabung</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-3xl border border-gray-100">
+              <p class="text-xl font-bold text-orange-500">5x</p>
+              <p class="text-[9px] font-bold text-gray-500 uppercase leading-tight mt-1">Produk Lokal</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-3xl border border-gray-100">
+              <p class="text-xl font-bold text-emerald-800">3x</p>
+              <p class="text-[9px] font-bold text-gray-500 uppercase leading-tight mt-1">Produk Longevity</p>
             </div>
           </div>
         </section>
 
         <section class="mb-10">
-          <div class="flex justify-between items-center mb-4 px-1">
-            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest italic">Voucher Produk Lokal</h3>
-            <span class="text-[10px] font-bold text-emerald-600 uppercase italic">Lihat Semua</span>
-          </div>
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 ml-1 italic">Badge Aktif</h3>
           <div class="space-y-3">
-            <div class="flex items-center gap-4 bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
-              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-emerald-500 shadow-sm">
-                <i class="fa-solid fa-ticket text-xl"></i>
+            <div class="flex items-center gap-4 p-4 bg-white rounded-3xl border border-emerald-100 shadow-sm">
+              <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 shrink-0">
+                <i class="fa-solid fa-seedling text-lg"></i>
               </div>
-              <div class="flex-grow">
-                <h4 class="text-[10px] font-bold text-emerald-900 uppercase italic leading-none mb-1">Diskon 15% Eco-Craft</h4>
-                <p class="text-[9px] text-emerald-600 font-medium italic">Hasil pembelian Kebaya Hutan Raya</p>
+              <div>
+                <h4 class="text-[10px] font-bold text-emerald-600 uppercase italic">Green Shopper</h4>
+                <p class="text-[9px] text-gray-500 italic mt-0.5">Sering memilih pengiriman rendah emisi.</p>
               </div>
-              <button class="bg-emerald-600 text-white text-[8px] font-bold px-3 py-2 rounded-lg uppercase tracking-tighter">Gunakan</button>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white rounded-3xl border border-blue-50 shadow-sm">
+              <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 shrink-0">
+                <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+              </div>
+              <div>
+                <h4 class="text-[10px] font-bold text-blue-500 uppercase italic">Local Supporter</h4>
+                <p class="text-[9px] text-gray-500 italic mt-0.5">Konsisten mendukung UMKM lokal.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section>
-          <div class="flex justify-between items-center mb-4 px-1">
-            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest italic">Riwayat Aktivitas</h3>
-          </div>
-
-          <div class="space-y-4">
-            <div class="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm">
-              <div class="flex justify-between items-start mb-2">
-                <div>
-                  <p class="text-[11px] font-bold text-gray-800 italic leading-none">Checkout Batch 16:00</p>
-                  <p class="text-[8px] text-gray-400 mt-1 uppercase tracking-tighter">09 Jan 2026 • #ORD-99120</p>
-                </div>
-                <span class="text-[11px] font-bold text-emerald-600 italic">+20 Pts</span>
+        <section class="mb-10">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 ml-1 italic">Refleksi Aktivitas</h3>
+          <div class="space-y-4 px-2">
+            <div class="flex gap-4 relative">
+              <div class="w-[2px] bg-gray-100 absolute left-[19px] top-6 bottom-[-16px]"></div>
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center z-10 shrink-0">
+                <i class="fa-solid fa-check text-[10px] text-emerald-600"></i>
               </div>
-              <div class="flex items-center gap-2 mt-3 pt-3 border-t border-dashed border-gray-100">
-                <i class="fa-solid fa-ticket text-[10px] text-emerald-500"></i>
-                <p class="text-[9px] font-bold text-emerald-700 uppercase italic">Mendapatkan 2 Kupon Diskon Produk Lokal</p>
+              <div class="pt-2">
+                <p class="text-[10px] font-bold text-gray-700 italic">Memilih Green Delivery</p>
+                <p class="text-[8px] text-gray-400 uppercase font-bold mt-0.5">8 Jan 2026</p>
               </div>
             </div>
-
-            <div class="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm opacity-70">
-              <div class="flex justify-between items-start mb-2">
-                <div>
-                  <p class="text-[11px] font-bold text-gray-800 italic leading-none">Beli Produk Lokal</p>
-                  <p class="text-[8px] text-gray-400 mt-1 uppercase tracking-tighter">08 Jan 2026 • #ORD-98211</p>
-                </div>
-                <span class="text-[11px] font-bold text-emerald-600 italic">+10 Pts</span>
+            <div class="flex gap-4 relative">
+              <div class="w-[2px] bg-gray-100 absolute left-[19px] top-6 bottom-[-16px]"></div>
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-blue-400 flex items-center justify-center z-10 shrink-0">
+                <i class="fa-solid fa-object-group text-[10px] text-blue-500"></i>
               </div>
-              <div class="flex items-center gap-2 mt-3 pt-3 border-t border-dashed border-gray-100">
-                <i class="fa-solid fa-ticket text-[10px] text-emerald-500"></i>
-                <p class="text-[9px] font-bold text-emerald-700 uppercase italic">Mendapatkan 1 Kupon Diskon Produk Lokal</p>
+              <div class="pt-2">
+                <p class="text-[10px] font-bold text-gray-700 italic">Menggabungkan 3 Pesanan</p>
+                <p class="text-[8px] text-gray-400 uppercase font-bold mt-0.5">5 Jan 2026</p>
               </div>
             </div>
           </div>
         </section>
+
+        <div class="bg-emerald-50 rounded-[28px] p-5 border border-emerald-100">
+          <div class="flex items-start gap-3">
+            <span class="text-lg italic">💡</span>
+            <p class="text-[10px] text-emerald-800 leading-relaxed italic">
+              <span class="font-bold uppercase tracking-tighter">Insight:</span><br />
+              Pengiriman gabungan membantu mengurangi jumlah kendaraan kurir di jalan. Hal ini memperpendek jarak distribusi secara kolektif.
+            </p>
+          </div>
+        </div>
       </main>
 
       <nav
-        class="sticky bottom-0 z-30 bg-white/95 backdrop-blur-md border-t border-gray-100 px-8 py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.02)]"
+        class="sticky bottom-0 z-30 bg-white border-t border-gray-100 px-8 py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.02)]"
       >
         <button onclick="window.location.href='halamanutama.html'" class="flex flex-col items-center gap-1 text-gray-300">
-          <i class="fa-solid fa-house-chimney text-lg"></i>
-          <span class="text-[9px] font-bold uppercase tracking-tighter">Beranda</span>
+          <i class="fa-solid fa-house-chimney text-lg"></i><span class="text-[9px] font-bold uppercase">Beranda</span>
         </button>
         <button class="flex flex-col items-center gap-1 text-emerald-600">
-          <i class="fa-solid fa-wallet text-lg"></i>
-          <span class="text-[9px] font-bold uppercase tracking-tighter">Wallet</span>
+          <i class="fa-solid fa-wallet text-lg"></i><span class="text-[9px] font-bold uppercase">Wallet</span>
           <div class="w-1 h-1 bg-emerald-600 rounded-full"></div>
         </button>
         <button onclick="window.location.href='chatpembeli.html'" class="flex flex-col items-center gap-1 text-gray-300">
-          <i class="fa-solid fa-comment-dots text-lg"></i>
-          <span class="text-[9px] font-bold uppercase tracking-tighter">Pesan</span>
+          <i class="fa-solid fa-comment-dots text-lg"></i><span class="text-[9px] font-bold uppercase">Pesan</span>
         </button>
         <button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-gray-300">
-          <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center mb-0.5 border border-gray-100">
-            <i class="fa-solid fa-user text-[10px]"></i>
-          </div>
-          <span class="text-[9px] font-bold uppercase tracking-tighter">Profil</span>
+          <i class="fa-solid fa-user text-lg"></i><span class="text-[9px] font-bold uppercase">Profil</span>
         </button>
       </nav>
     </div>
