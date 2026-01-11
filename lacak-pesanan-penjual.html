@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lacak Pengiriman - Seller - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .step-active {
+        color: #059669;
+      }
+      .step-inactive {
+        color: #d1d5db;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-4 border-b border-gray-50 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <button onclick="history.back()" class="text-gray-800">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+          </button>
+          <h1 class="text-sm font-bold tracking-tight uppercase italic text-emerald-600">Status Pengiriman</h1>
+        </div>
+        <button class="text-[10px] font-bold text-gray-400 uppercase italic underline">Bantuan</button>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar pb-32">
+        <section class="p-6 bg-emerald-50 border-b border-emerald-100">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <p class="text-[8px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Nomor Resi (Batch)</p>
+              <h2 class="text-sm font-bold font-mono text-gray-800">
+                RFK-2026-B1092 <i class="fa-regular fa-copy ml-2 text-gray-400 cursor-pointer"></i>
+              </h2>
+            </div>
+            <span class="bg-emerald-600 text-white text-[8px] font-bold px-3 py-1 rounded-full uppercase italic">Dalam Perjalanan</span>
+          </div>
+
+          <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-emerald-100">
+            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <p class="text-[9px] font-bold text-gray-400 uppercase leading-none mb-1">Kurir Ekosistem</p>
+              <p class="text-[10px] font-bold text-gray-800 italic">Reflek Logistik - Green Fleet</p>
+            </div>
+          </div>
+
+          <div class="mt-4 overflow-hidden rounded-[28px] border border-emerald-100 shadow-sm relative group">
+            <div
+              class="absolute top-3 left-3 z-10 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-emerald-50 flex items-center gap-2"
+            >
+              <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+              <span class="text-[8px] font-bold text-gray-700 uppercase tracking-tighter">Live Tracking: Menuju Wonokromo</span>
+            </div>
+
+            <div class="w-full h-48 bg-gray-200 relative">
+              <img
+                src="https://maps.googleapis.com/maps/api/staticmap?center=-7.2486,112.7220&zoom=13&size=600x300&maptype=roadmap&markers=color:green%7Clabel:S%7C-7.2486,112.7220&markers=color:blue%7Clabel:C%7C-7.2300,112.7300&style=feature:all%7Celement:labels.text.fill%7Ccolor:0x333333&style=feature:landscape%7Celement:all%7Ccolor:0xf5f5f5&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:water%7Celement:all%7Ccolor:0x9cd3db&key=YOUR_API_KEY_HERE"
+                alt="Tracking Map"
+                class="w-full h-full object-cover"
+              />
+
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div class="relative">
+                  <div
+                    class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white animate-bounce"
+                  >
+                    <i class="fa-solid fa-truck-moving text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-3 flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-emerald-600 text-[10px]"></i>
+                <span class="text-[9px] font-bold text-gray-600 italic">Sekitar Jl. Demak Timur, Surabaya</span>
+              </div>
+              <button class="text-[8px] font-bold text-emerald-600 uppercase underline">Perbesar Peta</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="p-8">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-8 italic">Riwayat Operasional</h3>
+
+          <div class="space-y-8">
+            <div class="flex gap-6 relative">
+              <div class="w-[2px] bg-emerald-500 absolute left-[11px] top-6 bottom-[-32px]"></div>
+              <div class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center z-10 shrink-0 shadow-lg shadow-emerald-200">
+                <i class="fa-solid fa-box text-[8px] text-white"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-emerald-600 italic">Paket Tiba di Sortir Hub - Surabaya</p>
+                <p class="text-[9px] text-gray-400 font-bold uppercase mt-0.5">11 Jan 2026 • 12:45</p>
+                <p class="text-[9px] text-gray-500 mt-2 leading-relaxed italic">Batch pengiriman sedang diproses untuk distribusi area Wonokromo.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6 relative">
+              <div class="w-[2px] bg-emerald-500 absolute left-[11px] top-6 bottom-[-32px]"></div>
+              <div class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center z-10 shrink-0">
+                <i class="fa-solid fa-hand-holding-box text-[8px] text-white"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-gray-700 italic">Diserahkan ke Kurir Batch</p>
+                <p class="text-[9px] text-gray-400 font-bold uppercase mt-0.5">11 Jan 2026 • 09:15</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6 relative">
+              <div class="w-[2px] bg-emerald-500 absolute left-[11px] top-6 bottom-[-32px]"></div>
+              <div class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center z-10 shrink-0">
+                <i class="fa-solid fa-object-group text-[8px] text-white"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-gray-700 italic">Batch Merging Selesai (16:00 Threshold)</p>
+                <p class="text-[9px] text-gray-400 font-bold uppercase mt-0.5">10 Jan 2026 • 16:05</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center z-10 shrink-0">
+                <i class="fa-solid fa-check text-[8px] text-white"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-gray-700 italic">Pesanan Dijemput Penjual</p>
+                <p class="text-[9px] text-gray-400 font-bold uppercase mt-0.5">10 Jan 2026 • 10:20</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="sticky bottom-0 z-40 bg-white border-t border-gray-100 p-6 flex gap-3">
+        <button class="flex-grow py-4 bg-gray-50 text-gray-600 font-bold rounded-2xl text-[10px] uppercase italic border border-gray-200">
+          Hubungi Kurir
+        </button>
+        <button class="px-6 py-4 bg-emerald-600 text-white font-bold rounded-2xl text-[10px] uppercase italic shadow-lg shadow-emerald-100">
+          Lihat Foto Serah Terima
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
