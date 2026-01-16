@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifikasi - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .unread-indicator {
+        width: 6px;
+        height: 6px;
+        background-color: #10b981;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-6 border-b border-gray-50 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <button onclick="window.location.href='halamanutama.html'" class="text-gray-800">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+          </button>
+          <h1 class="text-lg font-bold tracking-tight uppercase italic text-emerald-600">Notifikasi</h1>
+        </div>
+        <button class="text-[10px] font-bold text-gray-400 uppercase tracking-widest hover:text-emerald-600 transition-colors">Bersihkan</button>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar">
+        <div class="px-6 py-4 bg-gray-50/50 border-b border-gray-50">
+          <p class="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em]">Hari Ini</p>
+        </div>
+
+        <div class="divide-y divide-gray-50">
+          <div
+            onclick="window.location.href='impact-wallet.html'"
+            class="p-6 bg-emerald-50/40 flex gap-4 transition-colors cursor-pointer group hover:bg-emerald-100/50"
+          >
+            <div
+              class="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-emerald-100 group-active:scale-90 transition-transform"
+            >
+              <i class="fa-solid fa-leaf text-lg"></i>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-[11px] font-bold text-emerald-800 uppercase italic">Aksi Hijau Berhasil!</h4>
+                <div class="unread-indicator"></div>
+              </div>
+              <p class="text-[10px] text-gray-600 leading-relaxed italic">
+                Kamu menghemat <span class="font-bold text-emerald-700">0.45 kg CO2</span> hari ini. Teruslah belanja secara bijak!
+              </p>
+              <span class="text-[8px] font-bold text-gray-400 uppercase mt-2 block">10 Menit Lalu</span>
+            </div>
+          </div>
+
+          <div onclick="window.location.href='daftar-pesanan.html'" class="p-6 flex gap-4 transition-colors cursor-pointer group hover:bg-gray-50">
+            <div
+              class="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-100 group-active:scale-90 transition-transform"
+            >
+              <i class="fa-solid fa-truck-ramp-box text-lg"></i>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-[11px] font-bold text-gray-800 uppercase italic">Batch Siap Dikirim</h4>
+              </div>
+              <p class="text-[10px] text-gray-500 leading-relaxed italic">
+                Pesanan <span class="font-bold text-blue-600">#ORD-99120</span> telah digabung dan akan berangkat pukul 16:00.
+              </p>
+              <span class="text-[8px] font-bold text-gray-400 uppercase mt-2 block">2 Jam Lalu</span>
+            </div>
+          </div>
+
+          <div onclick="window.location.href='impact-wallet.html'" class="p-6 flex gap-4 transition-colors cursor-pointer group hover:bg-gray-50">
+            <div
+              class="w-12 h-12 bg-amber-400 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-amber-100 group-active:scale-90 transition-transform"
+            >
+              <i class="fa-solid fa-medal text-lg"></i>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-[11px] font-bold text-gray-800 uppercase italic">Badge Terbuka</h4>
+              </div>
+              <p class="text-[10px] text-gray-500 leading-relaxed italic">
+                Selamat! Badge <span class="font-bold text-amber-600">"Pahlawan Lokal"</span> kini aktif di profilmu.
+              </p>
+              <span class="text-[8px] font-bold text-gray-400 uppercase mt-2 block">5 Jam Lalu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 bg-gray-50/50 border-y border-gray-50 mt-4">
+          <p class="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em]">Kemarin</p>
+        </div>
+
+        <div class="divide-y divide-gray-50 opacity-60">
+          <div onclick="window.location.href='halamanutama.html'" class="p-6 flex gap-4 transition-colors cursor-pointer group hover:bg-gray-50">
+            <div class="w-12 h-12 bg-gray-200 rounded-2xl flex items-center justify-center text-gray-400 shrink-0">
+              <i class="fa-solid fa-ticket text-lg"></i>
+            </div>
+            <div class="flex-grow">
+              <h4 class="text-[11px] font-bold text-gray-800 uppercase italic">Voucher Baru</h4>
+              <p class="text-[10px] text-gray-500 leading-relaxed italic">Gunakan voucher diskon 15% untuk koleksi Eco-Craft terbaru.</p>
+              <span class="text-[8px] font-bold text-gray-400 uppercase mt-2 block">15 Jan 2026</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <nav class="sticky bottom-0 z-30 bg-white/95 backdrop-blur-md border-t border-gray-100 px-8 py-4 flex justify-between items-center shrink-0">
+        <button class="flex flex-col items-center gap-1 text-gray-300" onclick="window.location.href='halamanutama.html'">
+          <i class="fa-solid fa-house-chimney text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Beranda</span>
+        </button>
+        <button onclick="window.location.href='impact-wallet.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <i class="fa-solid fa-wallet text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Wallet</span>
+        </button>
+        <button onclick="window.location.href='notifikasi.html'" class="flex flex-col items-center gap-1 text-emerald-600 relative">
+          <i class="fa-solid fa-bell text-lg"></i>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Notifikasi</span>
+          <div class="w-1 h-1 bg-emerald-600 rounded-full"></div>
+        </button>
+        <button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-gray-300">
+          <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center mb-0.5 border border-gray-100">
+            <i class="fa-solid fa-user text-[10px]"></i>
+          </div>
+          <span class="text-[9px] font-bold uppercase tracking-tighter">Profil</span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>

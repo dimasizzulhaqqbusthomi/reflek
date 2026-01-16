@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Support - REFLEK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+    <div class="max-w-md w-full bg-white shadow-2xl flex flex-col h-screen relative overflow-hidden">
+      <header class="sticky top-0 z-30 bg-white px-6 pt-12 pb-4 border-b border-gray-50 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <button onclick="history.back()" class="text-gray-800">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+          </button>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 border border-emerald-200">
+              <i class="fa-solid fa-headset text-sm"></i>
+            </div>
+            <div>
+              <h1 class="text-xs font-bold italic text-gray-800">Reflek Support</h1>
+              <p class="text-[8px] font-bold text-emerald-500 uppercase tracking-tighter">Online • Admin Hijau</p>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical text-gray-300"></i>
+      </header>
+
+      <main class="flex-grow overflow-y-auto no-scrollbar px-6 py-6 space-y-6 bg-gray-50/30">
+        <div class="flex gap-3 max-w-[85%]">
+          <div class="w-8 h-8 bg-emerald-500 rounded-xl flex items-center justify-center text-white shrink-0 mt-1">
+            <i class="fa-solid fa-robot text-[10px]"></i>
+          </div>
+          <div class="bg-white p-4 rounded-3xl rounded-tl-none border border-gray-100 shadow-sm">
+            <p class="text-[10px] text-gray-700 leading-relaxed italic">
+              Halo Adrian! 👋 Saya asisten virtual REFLEK. Ada yang bisa saya bantu terkait pesanan ramah lingkunganmu atau Impact Wallet hari ini?
+            </p>
+            <span class="text-[8px] text-gray-300 uppercase font-bold mt-2 block">09:41 AM</span>
+          </div>
+        </div>
+
+        <div class="flex flex-row-reverse gap-3 max-w-[85%] ml-auto">
+          <div class="bg-emerald-600 p-4 rounded-3xl rounded-tr-none shadow-lg shadow-emerald-100">
+            <p class="text-[10px] text-white leading-relaxed italic">Halo, poin saya belum masuk setelah pengiriman batch kemarin.</p>
+            <span class="text-[8px] text-emerald-200 uppercase font-bold mt-2 block text-right">09:42 AM</span>
+          </div>
+        </div>
+
+        <div class="flex gap-3 max-w-[85%]">
+          <div class="w-8 h-8 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0 mt-1 border border-emerald-200">
+            <i class="fa-solid fa-user-tie text-[10px]"></i>
+          </div>
+          <div class="bg-white p-4 rounded-3xl rounded-tl-none border border-gray-100 shadow-sm">
+            <p class="text-[10px] text-gray-700 leading-relaxed italic">
+              Sedang kami cek ya kak. Mohon tunggu sebentar, sistem sedang memvalidasi data emisi yang kamu hemat. 🌿
+            </p>
+            <span class="text-[8px] text-gray-300 uppercase font-bold mt-2 block">09:43 AM</span>
+          </div>
+        </div>
+      </main>
+
+      <footer class="p-6 bg-white border-t border-gray-50">
+        <div class="flex items-center gap-3 bg-gray-50 p-2 rounded-[24px] border border-gray-100 focus-within:border-emerald-300 transition-all">
+          <button class="w-10 h-10 text-gray-400 hover:text-emerald-500 transition-colors">
+            <i class="fa-solid fa-paperclip text-sm"></i>
+          </button>
+          <input
+            type="text"
+            placeholder="Tulis pesan..."
+            class="flex-grow bg-transparent text-[10px] font-bold italic text-gray-700 focus:outline-none placeholder-gray-400"
+          />
+          <button class="w-10 h-10 bg-emerald-600 text-white rounded-2xl shadow-lg shadow-emerald-100 active:scale-90 transition-all">
+            <i class="fa-solid fa-paper-plane text-[10px]"></i>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
